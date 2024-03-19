@@ -144,7 +144,7 @@ const Navbar = ({ show }) => {
     {
       name: "Sleep",
       icon: <img src={Sleep} alt="Sleep" className="w-10 h-10" />,
-      url: "/button6",
+      url: "/sleep",
       cName: "nav-text",
     },
     {

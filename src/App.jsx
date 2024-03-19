@@ -5,6 +5,7 @@ import Splashscreen from "./Components/Splashscreen";
 import Nutrition from "./Components/Pages/Nutrition";
 import Organic from "./Components/Pages/Organic";
 import Navbar from "./Components/Sidebar/Navbar";
+import Sleep from "./Components/Pages/Sleep";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
         <Route path="/dashboard" element={<Navbar />} />
         <Route exact path="/nutrition" element={<Nutrition />} />
         <Route exact path="/organic" element={<Organic />} />
+        <Route exact path="/sleep" element={<Sleep />} />
       </Routes>
     </>
   );
