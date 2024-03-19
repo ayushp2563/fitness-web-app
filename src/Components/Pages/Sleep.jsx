@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Daysleep from "../Sleepcharts/Daysleep";
+import Daysleep from "../Sleepdata/Daysleep";
+import Weeksleep from "../Sleepdata/Weeksleep";
 
 const selectTime = ["D", "W", "M", "Y"];
 
@@ -9,7 +10,11 @@ const DayContent = ({ day }) => {
     // case "D":
     //   return <div>This is the content for Day.</div>;
     case "W":
-      return <div>This is the content for Week.</div>;
+      return (
+        <div>
+          <Weeksleep />
+        </div>
+      );
     case "M":
       return <div>This is the content for Month.</div>;
     case "Y":

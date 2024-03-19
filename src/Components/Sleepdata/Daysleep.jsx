@@ -1,4 +1,5 @@
-import { NutritionChart } from "../Charts/NutritionChart";
+//import { DaysleepChart } from "../Charts/DaysleepChart";
+import DayChart from "../Charts/DaysleepChart";
 
 const Daysleep = () => {
   return (
@@ -31,8 +32,8 @@ const Daysleep = () => {
             </div>
           </div> */}
 
-          <div className="flex flex-col w-full md:w-[500px] h-[500px]  justify-center">
-            <NutritionChart />
+          <div className="flex flex-col w-full md:w-[500px] h-[300px]  justify-center">
+            <DayChart />
           </div>
         </div>
 
@@ -62,7 +63,7 @@ const Daysleep = () => {
               6 Hrs 14 Min
             </p>
           </div>
-          <div className="flex items-center justify-between mb-2 px-4 py-2 bg-[##f8f6ff] rounded-md">
+          <div className="flex items-center justify-between mb-2 px-4 py-2 bg-[#f8f6ff] rounded-md">
             <div className="flex items-center">
               <div className="w-6 h-2 rounded-lg bg-[#ffdc00] mr-2"></div>
               <p className="text-sm">Awake</p>
