@@ -7,7 +7,7 @@ const Weeksleep = () => {
         <div className=" inset-0 z-40 flex flex-col items-center border-2 border-[#ffffff] shadow-xl bg-[#f9f9f9] px-2">
           <div className="flex items-center justify-between w-full mt-8 px-4 ">
             <div className="flex flex-col items-center px-2">
-              <h2 className="text-md ">Night Sleep</h2>
+              <h2 className="text-md ">Sleep duration per day</h2>
               <p className="text-sm mt-1">8 Hrs 16 Min</p>
             </div>
           </div>
@@ -72,6 +72,15 @@ const Weeksleep = () => {
                 0 Hrs 16 Min
               </p>
             </div>
+            <div className="flex items-center justify-between mb-2 px-4 py-2 bg-[#f8f6ff] rounded-md">
+              <div className="flex items-center">
+                <div className="w-6 h-2 rounded-lg bg-[#2a87ff] mr-2"></div>
+                <p className="text-sm">Awake</p>
+              </div>
+              <p className="flex flex-row text-sm items-center justify-center">
+                0 Hrs 16 Min
+              </p>
+            </div>
 
             {/* data section */}
             <div className="flex items-center justify-between mb-2 px-4 py-2 bg-[#f5f6f7] rounded-md">
@@ -125,7 +134,7 @@ const Weeksleep = () => {
                 <p className="text-sm">Reference values : After 6:00</p>
               </div>
               <p className="flex flex-row text-sm items-center justify-center">
-                00:21 Late
+                08:37
               </p>
             </div>
           </div>

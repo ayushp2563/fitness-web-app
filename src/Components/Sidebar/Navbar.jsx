@@ -94,6 +94,8 @@ import Sleep from "../../images/sleep.png";
 import Health from "../../images/health.png";
 import Runing from "../../images/running.png";
 import Vegan from "../../images/vegan.png";
+import { useDispatch, useSelector } from "react-redux";
+import { setTitle } from "../../actions/actions";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ show }) => {
@@ -109,58 +111,65 @@ const Navbar = ({ show }) => {
     navigate(url);
   };
 
+  // to dynamically change the title of navbar
+  const dispatch = useDispatch();
+  const title = useSelector((state) => state.title);
+  const handleClick = (title) => {
+    dispatch(setTitle(title));
+  };
+
   const buttons = [
     {
-      name: "Nutrition",
+      name: "NUTRITION",
       icon: <img src={Nutrition} alt="Nutrition" className="w-10 h-10" />,
       url: "/nutrition",
       cName: "nav-text",
     },
     {
-      name: "Organic",
+      name: "ORGANIC",
       icon: <img src={Organic} alt="Organic" className="w-10 h-10" />,
       url: "/organic",
       cName: "nav-text",
     },
     {
-      name: "Yoga",
+      name: "YOGA",
       icon: <img src={Yoga} alt="Yoga" className="w-10 h-10" />,
       url: "/yoga",
       cName: "nav-text",
     },
 
     {
-      name: "Sports",
+      name: "SPORTS",
       icon: <img src={Sports} alt="Sports" className="w-10 h-10" />,
       url: "/button4",
       cName: "nav-text",
     },
     {
-      name: "Nature",
+      name: "NATURE",
       icon: <img src={Nature} alt="Nature" className="w-10 h-10" />,
       url: "/button5",
       cName: "nav-text",
     },
     {
-      name: "Sleep",
+      name: "SLEEP",
       icon: <img src={Sleep} alt="Sleep" className="w-10 h-10" />,
       url: "/sleep",
       cName: "nav-text",
     },
     {
-      name: "Health",
+      name: "HEALTH",
       icon: <img src={Health} alt="Health" className="w-10 h-10" />,
       url: "/button7",
       cName: "nav-text",
     },
     {
-      name: "Running",
+      name: "RUNNING",
       icon: <img src={Runing} alt="Running" className="w-10 h-10" />,
       url: "/button8",
       cName: "nav-text",
     },
     {
-      name: "Vegan",
+      name: "VEGAN",
       icon: <img src={Vegan} alt="Vegan" className="w-10 h-10" />,
       url: "/button9",
       cName: "nav-text",
@@ -186,14 +195,17 @@ const Navbar = ({ show }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
             className="lucide lucide-menu cursor-pointer"
-            onClick={toggleSidebar}
+            onClick={() => {
+              handleClick("CUSTOMIZE YOUR INTEREST");
+              toggleSidebar();
+            }}
           >
             <line x1="4" x2="20" y1="12" y2="12" />
             <line x1="4" x2="20" y1="6" y2="6" />
             <line x1="4" x2="20" y1="18" y2="18" />
           </svg>
         </div>
-        <div className="flex items-center gap-x-5">DASHBOARD</div>
+        <div className="flex items-center gap-x-5">{title}</div>
         <div className="flex items-center gap-x-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +236,10 @@ const Navbar = ({ show }) => {
                   to={button.url}
                   key={index}
                   className="flex flex-col items-center justify-center p-0"
-                  onClick={() => closeSidebarAndNavigate(button.url)}
+                  onClick={() => {
+                    closeSidebarAndNavigate(button.url);
+                    handleClick(button.name);
+                  }}
                 >
                   <button className="bg-white text-black py-2 px-2 w-20 h-20 flex items-center justify-center shadow rounded-sm border border-stone-600 hover:bg-gradient-to-t from-slate-200 to-slate-100 mt-5">
                     <span className="mr-0">{button.icon}</span>

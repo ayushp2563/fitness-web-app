@@ -6,7 +6,6 @@ import { NutritionChart } from "../Charts/NutritionChart";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
-// const SomeComponent = () => {
 //  const dispatch = useDispatch();
 
 //  const handleClick = () => {
@@ -17,8 +16,6 @@ import { IoIosArrowDown } from "react-icons/io";
 //     <button onClick={handleClick}>Change Navbar Title</button>
 //  );
 // };
-
-// export default SomeComponent;
 
 const Nutrition = () => {
   return (

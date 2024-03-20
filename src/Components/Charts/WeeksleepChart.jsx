@@ -37,29 +37,29 @@ const chartOptions = {
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 
 const chartData = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      label: "Deep Sleep",
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
       backgroundColor: "rgba(233,51,49,255)",
     },
     {
-      label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      label: "Light Sleep",
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
       backgroundColor: "rgba(12,82,191,255)",
     },
     {
-      label: "Dataset 3",
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      label: "Awake",
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
       backgroundColor: "rgba(255,220,0,255)",
     },
     {
-      label: "Dataset 4",
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      label: "Awake",
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
       backgroundColor: "rgba(42,135,255,255)",
     },
   ],

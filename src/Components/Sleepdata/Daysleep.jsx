@@ -74,15 +74,7 @@ const Daysleep = () => {
           </div>
 
           {/* data section */}
-          <div className="flex items-center justify-between mb-2 px-4 py-2 bg-[#f5f6f7] rounded-md">
-            <div className="flex flex-col items-start">
-              <p className="text-sm">Average sleep Duration</p>
-              <p className="text-sm">Reference values : 6-10 Hours</p>
-            </div>
-            <p className="flex flex-row text-sm items-center justify-center">
-              8 Hrs 20 Min
-            </p>
-          </div>
+
           <div className="flex items-center justify-between mb-2 px-4 py-4 bg-[#fef4f4] rounded-md">
             <div className="flex flex-col items-start">
               <p className="text-sm">Proportion of Deep sleep</p>
@@ -125,7 +117,7 @@ const Daysleep = () => {
               <p className="text-sm">Reference values : After 6:00</p>
             </div>
             <p className="flex flex-row text-sm items-center justify-center">
-              00:21 Late
+              08:37
             </p>
           </div>
         </div>
