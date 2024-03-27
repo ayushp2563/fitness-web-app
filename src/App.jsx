@@ -6,6 +6,7 @@ import Nutrition from "./Components/Pages/Nutrition";
 import Organic from "./Components/Pages/Organic";
 import Navbar from "./Components/Sidebar/Navbar";
 import Sleep from "./Components/Pages/Sleep";
+import SignUp from "./Components/Signup/Signup";
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/nutrition" element={<Nutrition />} />
         <Route exact path="/organic" element={<Organic />} />
         <Route exact path="/sleep" element={<Sleep />} />
+        <Route exact path="/signup" element={<SignUp />} />
       </Routes>
     </>
   );

@@ -16,9 +16,9 @@ const Splashscreen = () => {
           className="max-w-16 max-h-16 rounded-xl"
         />
       </div>
-      <div className="flex flex-row justify-center absolute bottom-5">
+      <div className="flex flex-row items-center justify-center absolute bottom-5">
         <p className="mr-2 mt-3 content-center">POWERED BY :</p>
-        <img src={company} alt="Company Logo" className="mb-2 max-w-24" />
+        <img src={company} alt="Company Logo" className=" mt-2 w-24" />
       </div>
     </div>
   );
